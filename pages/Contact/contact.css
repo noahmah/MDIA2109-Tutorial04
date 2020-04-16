@@ -1,0 +1,6 @@
+#ContactApp {
+  position: relative;
+  left: -100%;
+  opacity: 1;
+  transition: opacity 1s, left 1s;
+}

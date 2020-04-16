@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./chatpage.css";
 import Chat from "../../comps/Chat";
 import CustomButton from "../../comps/CustomButton";
 import Header from "../../comps/Header";
 import Input from "../../comps/Input";
+import Link from "next/link";
+import { MdMessage } from "react-icons/Md";
 
 // var welcome = "Welcome to my App";
 // function setWelcome() {
@@ -18,8 +20,13 @@ const ChatPage = ({}) => {
   const [color, setColor] = useState("#333");
   const [text, setText] = useState("Default");
 
+  useEffect(() => {
+    setTimeout(() => {}, 50);
+    document.querySelector("#chatpage").style.left = 0;
+  }, []);
+
   return (
-    <div>
+    <div id="chatpage">
       <div className="welcome">
         <Header fontSize={32} text={welcome} />
       </div>
